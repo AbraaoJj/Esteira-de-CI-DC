@@ -1,23 +1,23 @@
 name: Esteira de Integração e Entrega Contínua (CI/CD) 
 on: 
-push: 
-branches: [ main ] 
-pull_request: 
-branches: [ main ] 
+  push: 
+    branches: [ main ] 
+  pull_request: 
+    branches: [ main ] 
 jobs: 
-build-e-teste: 
-runs-on: ubuntu-latest 
-steps: 
-- name: Baixar Código do Repositório 
-  uses: actions/checkout@v3 
-- name: Configurar Node.js 
-  uses: actions/setup-node@v3 
-with: 
-node-version: '18' 
-- name: Instalar Dependências 
-  run: npm ci 
-- name: Executar Testes Automatizados 
-  run: npm test 
-env: 
-FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+  build-e-teste: 
+    runs-on: ubuntu-latest 
+    steps: 
+    - name: Baixar Código do Repositório 
+      uses: actions/checkout@v3 
+    - name: Configurar Node.js 
+      uses: actions/setup-node@v3 
+      with: 
+        node-version: '18' 
+      - name: Instalar Dependências 
+        run: npm ci 
+      - name: Executar Testes Automatizados 
+        run: npm test 
+        env: 
+          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
 
