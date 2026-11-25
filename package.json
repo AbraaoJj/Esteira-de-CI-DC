@@ -1,0 +1,12 @@
+{ 
+ "name": "fasttrack-logistics-cicd", 
+ "version": "1.0.0", 
+ "description": "Esteira CI/CD com GitHub Actions e Firebase", 
+ "scripts": { 
+ "test": "node test-firebase.js", 
+ "build": "echo 'Build da aplicacao concluido com sucesso!'" 
+ }, 
+ "dependencies": { 
+ "firebase": "^10.12.0" 
+ } 
+} 
